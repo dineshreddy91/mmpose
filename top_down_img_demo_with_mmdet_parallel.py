@@ -68,14 +68,14 @@ def main(image_name):
     img_name = image_name
     if os.path.exists(img_name+'.npy'):
         return
-    args.img = image_name
     if '.npy' in img_name:
         return
     if os.path.exists(img_name + '.npz'):
         return
-
-
     args = parse_args()
+    args.img = image_name
+
+
     """Visualize the demo images.
 
     Using mmdet to detect the human.
